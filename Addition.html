@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <script>
+        // Method1
+        // let a=parseInt(prompt("Enter the value of a:"));
+        // let b=parseInt(prompt("Enter the value of b:"));
+        // document.getElementById('demo').innerHTML=a+b;
+
+        // Method2
+        // let a=+prompt("Enter the value of a:");
+        // let b=+prompt("Enter the value of b:");
+        // document.getElementById('demo').innerHTML=a+b;
+
+        //Method3
+        let a=parseInt(prompt("Enter the value  of a:"));
+        let b=parseInt(prompt("Enter the value of b:"));
+        if(!isNaN(a) && !isNaN(b)){
+            document.getElementById('demo').innerHTML=a+b;
+        }else{
+            document.getElementById('demo').innerHTML="its not updated!"
+        }
+    </script>
+</body>
+</html>
