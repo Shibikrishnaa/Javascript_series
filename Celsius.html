@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius to Farenheat program in Javascript</title>
+</head>
+<body>
+    <form autocomplete="off">
+        <label>Enter the Celsius Value:</label>
+        <input type="number" id="Celsius">
+        <button id="Calculate">Calculate</button>
+        <button id="Reset">Reset</button>
+        <h1 id="demo"></h1>
+    </form>
+    <script>
+        document.getElementById('Calculate').addEventListener('click',(e)=>{
+            event.preventDefault();
+            let Celsius=Number(document.getElementById('Celsius').value);
+            let Farenheat=(Celsius*9/5)+32;
+            document.getElementById('demo').innerHTML='Farenheat value:'+" "+Farenheat;
+        })
+        document.getElementById('Reset').addEventListener('click',(e)=>{
+            event.preventDefault();
+            let Celsius=Number(document.getElementById('Celsius').value=" ");
+            document.getElementById('demo').innerHTML=" ";
+        })
+    </script>
+</body>
+</html>
