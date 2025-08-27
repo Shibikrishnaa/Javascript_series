@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even or Odd programs in Javascript</title>
+</head>
+<body>
+    <label>Enter the Number:</label>
+    <input type="number" id="Value">
+    <button id="result">Result</button>
+    <h1 id="demo"></h1>
+    <script>
+        document.getElementById('result').addEventListener('click',(e)=>{
+            e.preventDefault();
+            let Value=Number(document.getElementById('Value').value);
+            if(Value%2==0){
+                document.getElementById('demo').innerHTML=`The Given number is ${Value} is Even!`;
+            }else{
+                document.getElementById('demo').innerHTML=`The Given number is ${Value} is Odd!`;
+            }
+        })
+    </script>
+</body>
+</html>

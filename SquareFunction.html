@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter the Number which you want to make squared:</label>
+    <input type="number" id="Solution">
+    <button id="square">Square Number</button>
+    <h1 id="result"></h1>
+<script>
+    document.getElementById('square').addEventListener('click',(e)=>{
+        e.preventDefault();
+        let Solution=Number(document.getElementById('Solution').value)
+        let result=Solution*Solution;
+        document.getElementById('result').innerHTML=result;
+    })
+</script>
+</body>
+</html>
