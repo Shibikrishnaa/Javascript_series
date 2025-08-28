@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <label>Enter the Number1:</label>
+    <input type="number" id="Value1">
+    <label>Enter the Number2:</label>
+    <input type="number" id="Value2">
+    <label>Select the operation:</label>
+    <select id="operations">
+        <option value="+">Addition(+)</option>
+        <option value="-">Subtraction(-)</option>
+        <option value="*">Multiplication(*)</option>
+        <option value="/">Division(/)</option>
+        <option value="%">Remainder(%)</option>
+    </select>
+    <button id="result">Calculate</button>
+    <h1 id="demo"></h1>
+    <script>
+        document.getElementById('result').addEventListener('click',(e)=>{
+            e.preventDefault();
+            let Num1=Number(document.getElementById('Value1').value);
+            let Num2=Number(document.getElementById('Value2').value);
+            let Operations=document.getElementById('operations').value;
+            switch(Operations){
+                case "+":
+                    Add=Num1+Num2;
+                    document.getElementById('demo').innerHTML=`${Add}`;
+                    break;
+                    case "-":
+                        Sub=Num1-Num2;
+                        document.getElementById('demo').innerHTML=`${Sub}`;
+                        break;
+                        case "*":
+                            Mul=Num1*Num2;
+                            document.getElementById('demo').innerHTML=`${Mul}`;
+                            break;
+                            case "/":
+                                Div=Num1/Num2;
+                                document.getElementById('demo').innerHTML=`${Div}`;
+                                break;
+                                case "%":
+                                    Mod=Num1%Num2;
+                                    document.getElementById('demo').innerHTML=`${Mod}`;
+                                    break;
+                                    default:
+                                        document.getElementById('demo').innerHTML=`No Value`;
+                                        break;
+            }
+        })
+    </script>
+</body>
+</html>

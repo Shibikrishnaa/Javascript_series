@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positive Number or Not</title>
+</head>
+<body>
+    <label>Enter the Number:</label>
+    <input type="number" id="Value">
+    <button id="result">GetResult</button>
+    <h1 id="demo"></h1>
+    <script>
+        document.getElementById('result').addEventListener('click',(e)=>{
+            e.preventDefault();
+            let Value=Number(document.getElementById('Value').value);
+            if(Value>0){
+                document.getElementById('demo').innerHTML=`The ${Value} is a Positive Number!`;
+            }else{
+                document.getElementById('demo').innerHTML=`The ${Value} is not a Positive Number!`;
+            }
+        })
+    </script>
+</body>
+</html>

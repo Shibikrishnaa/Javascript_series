@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Ranges</title>
+</head>
+<body>
+    <label>Enter your Temperature:</label>
+    <input type="number" id="Value">
+    <button id="result">GetResult</button>
+    <h1 id="demo"></h1>
+<script>
+    document.getElementById('result').addEventListener('click',(e)=>{
+        e.preventDefault();
+        let Value=Number(document.getElementById('Value').value);
+        if(Value<0){
+            document.getElementById('demo').innerHTML=`Freezing ❄`;
+        }else if(Value>0 && Value<=15){
+            document.getElementById('demo').innerHTML=`Cold 🥶`;
+        }else if(Value>=16 && value<=30){
+            document.getElementById('demo').innerHTML=`Warm ☀`;
+        }else if(Value>=30){
+            document.getElementById('demo').innerHTML=`Hot 🔥`;
+        }
+    })
+</script>
+</body>
+</html>
