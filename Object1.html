@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in Javascript</title>
+</head>
+<body>
+    <label for="Name">Enter the StudentName:</label>
+    <input type="text" id="Name">
+    <label for="Age">Enter the StudentAge:</label>
+    <input type="number" id="Age">
+    <label for="Course">Enter the StudentCourse:</label>
+    <input type="text"  id="Course">
+    <label for="Grade">Enter the Grade:</label>
+    <input type="text" id="Grade">
+    <button id="result">Display</button>
+    <h1 id="demo"></h1>
+    <script>
+        document.getElementById('result').addEventListener('click',(e)=>{
+            e.preventDefault();
+            const Person={
+                StudentName:document.getElementById('Name').value,
+                StudentAge:Number(document.getElementById('Age').value),
+                StudentCourse:document.getElementById('Course').value,
+                StudentGrade:document.getElementById('Grade').value,
+            }
+            document.getElementById('demo').innerHTML=`StudentName:${Person.StudentName} <br>
+            StudentAge: ${Person.Age} <br>
+            StudentCourse: ${Person.StudentCourse} <br>
+            StudentGrade: ${Person.StudentGrade}`;
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Objects</title>
+</head>
+<body>
+    <label for="Title">Enter the Book Title:</label>
+    <input type="text" id="Title">
+    <label for="Author">Enter the Book Author:</label>
+    <input type="text" id="Author">
+    <label for="Year">Enter the Year:</label>
+    <input type="number" id="Year">
+    <label for="Price">Enter the Price:</label>
+    <input type="text" id="Price">
+    <button id="result">Display</button>
+    <h1 id="demo"></h1>
+    <script>
+        document.getElementById('result').addEventListener('click',(e)=>{
+            e.preventDefault();
+            const Books={
+                BookTitle:document.getElementById('Title').value,
+                BookAuthor:document.getElementById('Author').value,
+                BookYear:Number(document.getElementById('Year').value),
+                BookPrice:document.getElementById('Price').value
+            }
+            document.getElementById('demo').innerHTML=`BookTitle:${Books.BookTitle} <br>
+            BookAuthor: ${Books.BookAuthor} <br>
+            BookYear: ${Books.BookYear} <br>
+            BookPrice: ${Books.BookPrice}`
+        })
+    </script>
+</body>
+</html>
