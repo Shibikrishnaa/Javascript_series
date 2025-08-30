@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding the days using Switch Statements</title>
+</head>
+
+<body>
+    <label>Enter the Day:</label>
+    <input type="number" id="Value">
+    <button id="result">GetDay</button>
+    <h1 id="demo"></h1>
+    <script>
+        document.getElementById('result').addEventListener('click', (e) => {
+            e.preventDefault();
+            let Day = Number(document.getElementById('Value').value);
+            switch (Day) {
+                case 1:
+                    document.getElementById('demo').innerHTML = `Its Monday!`;
+                    break;
+                case 2:
+                    document.getElementById('demo').innerHTML = `Its Tuesday!`;
+                    break;
+                case 3:
+                    document.getElementById('demo').innerHTML = `Its Wednesday!`;
+                    break;
+                case 4:
+                    document.getElementById('demo').innerHTML = `Its Thursday!`;
+                    break;
+                case 5:
+                    document.getElementById('demo').innerHTML = `Its Friday!`;
+                    break;
+                case 6:
+                    document.getElementById('demo').innerHTML = `Its Saturday!`;
+                    break;
+                case 7:
+                    document.getElementById('demo').innerHTML = `Its Sunday!`;
+                    break;
+                default:
+                    document.getElementById('demo').innerHTML = `Only & days in a Week!`;
+                    break;
+            }
+        })
+    </script>
+</body>
+
+</html>

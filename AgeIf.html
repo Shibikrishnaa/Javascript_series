@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding the Age in Javascript</title>
+</head>
+<body>
+    <label for="Value">Enter the Age:</label>
+    <input type="number" id="Value">
+    <button id="result">GetAge</button>
+    <h1 id="demo"></h1>
+    <script>
+        document.getElementById('result').addEventListener('click',(e)=>{
+            e.preventDefault();
+            let Age=Number(document.getElementById('Value').value);
+            if(Age<=0 || isNaN(Age) ){
+                document.getElementById('demo').innerHTML="Please Enter the Valid Age!";
+            }else if(Age<13){
+                document.getElementById('demo').innerHTML=`Your Age is ${Age}. Your are child!`;
+            }else if(Age>13 && Age<=19){
+                document.getElementById('demo').innerHTML=`Your Age is ${Age}. Your are Teenager!`;
+            }else if(Age>=20 && Age<=59){
+                document.getElementById('demo').innerHTML=`Your Age is ${Age}. Your are Adult!`;
+            }else if(Age>=60){
+                document.getElementById('demo').innerHTML=`Your Age is ${Age}. Your are Senior Citizen!`;
+            }
+        })
+    </script>
+</body>
+</html>
