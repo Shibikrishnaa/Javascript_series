@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Keyword in Javascript object</title>
+</head>
+<body>
+    <label for="Name">StudentName:</label>
+    <input type="text" id="Name">
+    <label for="Marks">StudentMarks:</label>
+    <input type="number" id="Marks">
+    <button id="result">GetResult</button>
+    <h1 id="demo"></h1>
+    <script>
+        document.getElementById('result').addEventListener('click',(e)=>{
+            e.preventDefault();
+            Student={
+                StudentName:document.getElementById('Name').value,
+                StudentMarks:document.getElementById('Marks').value,
+                StudentResult:function(){
+                    return this.StudentMarks >=50 ? "Pass ✔" : "Fail ❌";
+                }
+            }
+            document.getElementById('demo').innerHTML=`StudentName:${Student.StudentName} <br>
+            StudentMarks:${Student.StudentMarks} <br>
+            StudentResult:${Student.StudentResult()}`
+        })
+    </script>
+</body>
+</html>

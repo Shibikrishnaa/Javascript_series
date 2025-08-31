@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Function in Javascript</title>
+</head>
+<body>
+    <label for="Car">Enter the CarName:</label>
+    <input type="text" id="Car">
+    <label for="CarBrand">Enter the CarBrand:</label>
+    <input type="text" id="Brand">
+    <label for="CarModel">Enter the CarModel:</label>
+    <input type="text" id="Model">
+    <label for="">Enter the CareYear:</label>
+    <input type="text" id="Year">
+    <button id="result">GetResult</button>
+    <h1 id="demo"></h1>
+    <script>
+        document.getElementById('result').addEventListener('click',(e)=>{
+            e.preventDefault();
+            const car={
+                CarName:document.getElementById('Car').value,
+                CarBrand:document.getElementById('Brand').value,
+                CarModel:document.getElementById('Model').value,
+                CarYear:document.getElementById('Year').value,
+                getDetails:()=>{
+                    return 'This car is a Tesla Model S from 2022.'
+                }
+            }
+            document.getElementById('demo').innerHTML=`CarName:${car.CarName}<br>
+            CarBrand:${car.CarBrand}<br>
+            CarModel:${car.CarModel}<br>
+            CarYear:${car.CarYear}<br>
+            CarDetails:${car.getDetails()}`
+        })
+    </script>
+</body>
+</html>
