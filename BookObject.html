@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Object in Javascript</title>
+</head>
+<body>
+    <label for="title">Enter the Book Title:</label>
+    <input type="text" id="title">
+    <label for="author">Enter the Book Author:</label>
+    <input type="text" id="author">
+    <label for="publisher">Enter the Book publisher:</label>
+    <input type="text" id="publisher">
+    <button id="result">Display</button>
+    <h1 id="demo"></h1>
+    <script>
+        document.getElementById('result').addEventListener('click',(e)=>{
+            e.preventDefault();
+            const Book={
+                Title:document.getElementById('title').value,
+                Author:document.getElementById('author').value,
+                publisher:document.getElementById('publisher').value,
+                getSummary:function(){
+                    return `This Book Name is`+" "+this.Title+" "+`Written By`+" "+this.Author+" "+
+                    `publisher of the book is`+" "+this.publisher
+                }
+            }
+            document.getElementById('demo').innerHTML=`${Book.getSummary()}`
+        })
+    </script>
+</body>
+</html>
