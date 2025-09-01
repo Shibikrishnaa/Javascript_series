@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop statements in Javascripts!</title>
+</head>
+<body>
+    <button id="result">GetResult</button>
+    <h1 id="demo"></h1>
+    <script>
+        document.getElementById('result').addEventListener('click',(e)=>{
+            e.preventDefault();
+        //     for(let i=1;i<=100;i++){
+        //         document.getElementById('demo').innerHTML+=i+`<br>`;
+        //     }
+        // })
+        //While Loop Statement
+    //     let i=1;
+    //     let output="";
+    //     while(i<=100){
+    //         output+=i+"<br>"
+    //         i++;
+    //         document.getElementById('demo').innerHTML=`${output}`;
+
+    //     }  
+    // })
+    let i=1;
+    let output="";
+    do{
+        output+=i+"<br>";
+        i++;
+    }
+    while(i<=100);
+    document.getElementById('demo').innerHTML=`${output}`;
+        })
+    </script>
+</body>
+</html>
