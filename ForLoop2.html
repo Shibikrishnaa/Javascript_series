@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In Loop in Javascript</title>
+</head>
+
+<body>
+    <label for="Name">Enter the Name of your City:</label>
+    <input type="text" id="Name">
+    <label for="State">Enter the Name of your State:</label>
+    <input type="text" id="State">
+    <label for="num">Enter the population in the City:</label>
+    <input type="number" id="num">
+    <button id="result">GetResult</button>
+    <h1 id="demo"></h1>
+    <script>
+        document.getElementById('result').addEventListener('click', (e) => {
+            e.preventDefault();
+            let City = {
+                Name: document.getElementById('Name').value,
+                State: document.getElementById('State').value,
+                Population: Number(document.getElementById('num').value)
+            }
+            let output = "";
+            for (let key in City) {
+                output += `${key}: ${City[key]}`;
+            }
+            document.getElementById('demo').innerHTML = output;
+        })
+    </script>
+</body>
+
+</html>
